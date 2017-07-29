@@ -53,7 +53,7 @@ Column name              | Type
 ------------             | -------------
 questionnaire_id         | UUID
 title                    | TEXT
-<questions>              | frozen question
+questions                | frozen question
 creator_nickname         | TEXT
 
 type question:
@@ -61,7 +61,7 @@ type question:
 Column name              | Type
 ------------             | -------------
 body                     | TEXT
-<answers>                | frozen answer
+answers                  | frozen answer
 
 type answer:
 
