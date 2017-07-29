@@ -43,18 +43,23 @@ questionnaire_list:
 
 Column name              | Type
 ------------             | -------------
-questionnaire_id         | UUID
+questionnaire_id    K     | UUID 
+creation_time       C    | timestamp 
 title                    | TEXT
+
 
 
 questionnaire_detailed:
 
 Column name              | Type
 ------------             | -------------
-questionnaire_id         | UUID
+questionnaire_id     K   | UUID
+creation_time            | timestamp
 title                    | TEXT
-questions                | frozen question
 creator_nickname         | TEXT
+questions                | frozen question
+answer                   | list custom type answer
+
 
 type question:
 
