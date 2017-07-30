@@ -57,18 +57,18 @@ questionnaire_id     K   | UUID
 creation_time            | timestamp
 title                    | TEXT
 creator_nickname         | TEXT
-questions                | frozen question
-answer                   | list custom type answer
+questions                | frozen questionModelType
+answerModelType                   | list custom type answerModelType
 
 
-type question:
+type questionModelType:
 
 Column name              | Type
 ------------             | -------------
 body                     | TEXT
-answers                  | frozen answer
+answers                  | frozen answerModelType
 
-type answer:
+type answerModelType:
 
 Column name              | Type
 ------------             | -------------
