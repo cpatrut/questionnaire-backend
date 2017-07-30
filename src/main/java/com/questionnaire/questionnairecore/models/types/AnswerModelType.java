@@ -4,7 +4,7 @@ import org.springframework.data.cassandra.mapping.Column;
 import org.springframework.data.cassandra.mapping.UserDefinedType;
 
 @UserDefinedType("answer")
-public class Answer {
+public class AnswerModelType {
 
     @Column("possible_answer")
     private String possibleAnswer;
@@ -33,10 +33,10 @@ public class Answer {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Answer answer = (Answer) o;
+        AnswerModelType answerModelType = (AnswerModelType) o;
 
-        if (correct != answer.correct) return false;
-        return possibleAnswer.equals(answer.possibleAnswer);
+        if (correct != answerModelType.correct) return false;
+        return possibleAnswer.equals(answerModelType.possibleAnswer);
     }
 
     @Override

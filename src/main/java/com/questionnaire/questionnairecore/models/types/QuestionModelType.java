@@ -6,13 +6,13 @@ import org.springframework.data.cassandra.mapping.UserDefinedType;
 import java.util.List;
 
 @UserDefinedType("question")
-public class Question {
+public class QuestionModelType {
 
     @Column("body")
     private String body;
 
     @Column("Answers")
-    private List<Answer> answerList;
+    private List<AnswerModelType> answerModelTypeList;
 
     public String getBody() {
         return body;
@@ -22,12 +22,12 @@ public class Question {
         this.body = body;
     }
 
-    public List<Answer> getAnswerList() {
-        return answerList;
+    public List<AnswerModelType> getAnswerModelTypeList() {
+        return answerModelTypeList;
     }
 
-    public void setAnswerList(List<Answer> answerList) {
-        this.answerList = answerList;
+    public void setAnswerModelTypeList(List<AnswerModelType> answerModelTypeList) {
+        this.answerModelTypeList = answerModelTypeList;
     }
 
     @Override
@@ -35,16 +35,16 @@ public class Question {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Question question = (Question) o;
+        QuestionModelType questionModelType = (QuestionModelType) o;
 
-        if (body != null ? !body.equals(question.body) : question.body != null) return false;
-        return answerList != null ? answerList.equals(question.answerList) : question.answerList == null;
+        if (body != null ? !body.equals(questionModelType.body) : questionModelType.body != null) return false;
+        return answerModelTypeList != null ? answerModelTypeList.equals(questionModelType.answerModelTypeList) : questionModelType.answerModelTypeList == null;
     }
 
     @Override
     public int hashCode() {
         int result = body != null ? body.hashCode() : 0;
-        result = 31 * result + (answerList != null ? answerList.hashCode() : 0);
+        result = 31 * result + (answerModelTypeList != null ? answerModelTypeList.hashCode() : 0);
         return result;
     }
 }

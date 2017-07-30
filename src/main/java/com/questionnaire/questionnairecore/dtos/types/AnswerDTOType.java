@@ -1,6 +1,6 @@
 package com.questionnaire.questionnairecore.dtos.types;
 
-public class AnswerDTO {
+public class AnswerDTOType {
     private String possibleAnswer;
     private boolean correct;
 
@@ -25,10 +25,10 @@ public class AnswerDTO {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        AnswerDTO answerDTO = (AnswerDTO) o;
+        AnswerDTOType answerDTOType = (AnswerDTOType) o;
 
-        if (correct != answerDTO.correct) return false;
-        return possibleAnswer != null ? possibleAnswer.equals(answerDTO.possibleAnswer) : answerDTO.possibleAnswer == null;
+        if (correct != answerDTOType.correct) return false;
+        return possibleAnswer != null ? possibleAnswer.equals(answerDTOType.possibleAnswer) : answerDTOType.possibleAnswer == null;
     }
 
     @Override
